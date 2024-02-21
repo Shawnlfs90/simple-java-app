@@ -14,7 +14,11 @@ pipeline {
         sh 'mvn clean package'            
       }
     }
-    
+    stage('Dummy') {
+ steps {
+ echo 'Meaningless statement to verify this' 
+ }
+ }
     stage('Test') {
       steps {
         sh 'mvn test'            
